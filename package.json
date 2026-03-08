@@ -1,0 +1,24 @@
+{
+  "name": "asynlib3",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r run dev",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r run test",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm run build && changeset publish"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^2.29.6",
+    "@types/node": "^22.0.0",
+    "tsdown": "^0.21.0",
+    "typescript": "5.9.3",
+    "vitest": "4.0.18"
+  }
+}
